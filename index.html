@@ -3,36 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucky Fox GDL | Restaurante & Bar</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Lucky Fox GDL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d0d0d; /* Fondo Negro */
+            color: white;
+        }
+
+        /* NAVBAR IDÉNTICO AL ANTERIOR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: #000000;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo-container img {
+            height: 50px; /* Tamaño del logo a la izquierda como la de tu hermano */
+            width: auto;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        /* SECCIÓN PRINCIPAL */
+        .hero {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 45px;
+            color: #ff6600; /* Naranja Lucky */
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        /* BOTONES DE REDES SOCIALES E IGUALES AL ANTERIOR */
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .social-icons img {
+            width: 30px;
+            filter: invert(1); /* Para que los iconos se vean blancos sobre negro */
+        }
+
+        .location {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <img src="logo-lucky.png" alt="Lucky Fox Logo" class="logo">
-    </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>LUCKY FOX GDL</h1>
-            <p>El mejor spot de Zapopan para drinks y snacks.</p>
-            <a href="https://wa.me/523329197976" class="btn-whatsapp">RESERVAR MESA</a>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo-lucky.png" alt="Logo Lucky Fox">
         </div>
-    </section>
-
-    <section id="contacto">
-        <h2>VISÍTANOS</h2>
-        <p class="address">Av. Aviación 4572-1A, Jardín Real, Zapopan, Jal.</p>
-        
-        <div class="social-links">
-            <a href="https://www.facebook.com/luckyfoxgdl/" target="_blank">FACEBOOK</a>
-            <a href="https://www.instagram.com/luckyfox_gdl" target="_blank">INSTAGRAM</a>
+        <div class="nav-links">
+            <a href="https://www.facebook.com/luckyfoxgdl/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/luckyfox_gdl" target="_blank">Instagram</a>
         </div>
-        
-        <a href="https://maps.app.goo.gl/uX3LhRzY3z3z3z3z7" target="_blank" class="btn-map">VER EN GOOGLE MAPS</a>
-    </section>
+    </nav>
 
-    <footer>
-        <p>&copy; 2026 Lucky Fox GDL | Desarrollado por Hugo Morales</p>
-    </footer>
+    <div class="hero">
+        <h1>LUCKY FOX GDL</h1>
+        <p>Restaurante & Bar | Zapopan, Jal.</p>
+        
+        <a href="https://wa.me/523329197976" class="btn-whatsapp">RESERVAR POR WHATSAPP</a>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/luckyfoxgdl/" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB">
+            </a>
+            <a href="https://www.instagram.com/luckyfox_gdl" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG">
+            </a>
+        </div>
+
+        <div class="location">
+            <p>Av. Aviación 4572-1A, Jardín Real, Zapopan.</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Av.+Aviacion+4572-1A+Zapopan" target="_blank" style="color: #ff6600; text-decoration: none;">Ver mapa</a>
+        </div>
+    </div>
+
 </body>
 </html>
