@@ -15,7 +15,7 @@
             scroll-behavior: smooth;
         }
 
-        /* NAVBAR FIXED */
+        /* NAVBAR */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -30,7 +30,7 @@
         }
 
         .logo-container img {
-            height: 115px; /* Tamaño del logo aumentado un 60% por segunda vez */
+            height: 180px; /* Logo super imponente */
             width: auto;
         }
 
@@ -51,7 +51,6 @@
             font-weight: 400;
         }
 
-        /* Botón WA en el Navbar */
         .btn-navbar-whatsapp {
             background-color: #25d366;
             color: white;
@@ -63,7 +62,7 @@
             margin-left: 20px;
         }
 
-        /* SECCIÓN HERO CON IMAGEN DE FONDO */
+        /* HERO */
         .hero {
             height: 85vh;
             display: flex;
@@ -72,18 +71,16 @@
             align-items: center;
             text-align: center;
             padding: 0 20px;
-            margin-top: 100px; /* Espacio para el navbar fixed */
-            
-            /* CONFIGURACIÓN DE IMAGEN DE FONDO CON degradado negro */
+            margin-top: 120px;
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('hero.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Efecto elegante al hacer scroll */
+            background-attachment: fixed;
         }
 
         h1 {
             font-size: clamp(32px, 8vw, 60px);
-            color: #ff6600; /* Naranja Lucky */
+            color: #ff6600;
             margin-bottom: 5px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -95,7 +92,6 @@
             margin-bottom: 30px;
         }
 
-        /* BOTÓN WA PRINCIPAL */
         .btn-whatsapp-hero {
             background-color: #25d366;
             color: white;
@@ -105,7 +101,7 @@
             font-weight: 700;
         }
 
-        /* SECCIÓN GALERÍA */
+        /* GALERÍA */
         .gallery {
             padding: 80px 5%;
             background-color: #000;
@@ -135,7 +131,7 @@
             border: 1px solid #222;
         }
 
-        /* SECCIÓN UBICACIÓN CON EL MAPA CORREGIDO */
+        /* UBICACIÓN */
         .ubicacion-section {
             padding: 80px 5%;
             background-color: #0d0d0d;
@@ -143,30 +139,22 @@
             border-top: 1px solid #222;
         }
 
-        .ubicacion-section h2 {
-            font-size: 32px;
-            color: white;
-            margin-bottom: 10px;
-            font-weight: 300;
-        }
-
         .address-text {
             color: #888;
             margin-bottom: 40px;
         }
 
-        /* Contenedor del mapa IDÉNTICO a tu captura */
         .map-container {
             overflow: hidden;
-            border-radius: 30px; /* Redondeado 3xl */
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); /* Sombra 2xl */
+            border-radius: 30px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
             max-width: 1000px;
             margin: 0 auto;
             border: 2px solid #222;
-            height: 450px; /* Altura fija para el mapa */
+            height: 450px;
         }
 
-        /* FOOTER & SOCIAL */
+        /* FOOTER */
         .footer-section {
             padding: 40px 5%;
             text-align: center;
@@ -181,12 +169,13 @@
 
         .social-icons img {
             width: 28px;
-            filter: invert(1); /* Iconos blancos */
+            filter: invert(1);
         }
 
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .logo-container img { height: 80px; }
+            .logo-container img { height: 100px; }
+            .navbar { padding: 10px 5%; }
             .map-container { height: 300px; }
         }
     </style>
@@ -228,7 +217,7 @@
         <h2>¿Dónde estamos?</h2>
         <p class="address-text">Av. Aviación 4572-1A, Jardín Real, Zapopan, Jal.</p>
         <div class="map-container">
-            <iframe src="http://googleusercontent.com/http://googleusercontent.com/maps.google.com/9" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.833621946006!2d-103.4449835!3d20.7169134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428a97471ba61f3%3A0xe54955b404d0920a!2sLucky%20Fox%20GDL!5e0!3m2!1ses-419!2smx!4v1712880000000!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 
