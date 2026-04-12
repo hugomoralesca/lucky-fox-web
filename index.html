@@ -12,7 +12,7 @@
             background-color: #0d0d0d;
             color: white;
             overflow-x: hidden;
-            scroll-behavior: smooth; /* Desplazamiento suave al hacer clic en enlaces */
+            scroll-behavior: smooth;
         }
 
         /* NAVBAR FIXED */
@@ -20,7 +20,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 5%; /* Un poco más de padding vertical */
+            padding: 15px 5%;
             background-color: rgba(0, 0, 0, 0.95);
             border-bottom: 1px solid #333;
             position: fixed;
@@ -30,7 +30,7 @@
         }
 
         .logo-container img {
-            height: 72px; /* Aumentado un 60% (era 45px) */
+            height: 115px; /* Tamaño del logo aumentado un 60% por segunda vez */
             width: auto;
         }
 
@@ -39,17 +39,23 @@
             align-items: center;
         }
 
+        .nav-links {
+            display: flex;
+        }
+
         .nav-links a {
             color: white;
             text-decoration: none;
             margin-left: 20px;
             font-size: 14px;
+            font-weight: 400;
         }
 
+        /* Botón WA en el Navbar */
         .btn-navbar-whatsapp {
             background-color: #25d366;
             color: white;
-            padding: 8px 18px;
+            padding: 10px 22px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
@@ -57,7 +63,7 @@
             margin-left: 20px;
         }
 
-        /* HERO SECTION */
+        /* SECCIÓN HERO CON IMAGEN DE FONDO */
         .hero {
             height: 85vh;
             display: flex;
@@ -66,17 +72,18 @@
             align-items: center;
             text-align: center;
             padding: 0 20px;
-            margin-top: 80px; /* Ajuste para el navbar más alto */
-            /* IMAGEN HERO CONFIGURADA CON PARALLAX */
+            margin-top: 100px; /* Espacio para el navbar fixed */
+            
+            /* CONFIGURACIÓN DE IMAGEN DE FONDO CON degradado negro */
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('hero.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-attachment: fixed; /* Efecto elegante al hacer scroll */
         }
 
         h1 {
             font-size: clamp(32px, 8vw, 60px);
-            color: #ff6600;
+            color: #ff6600; /* Naranja Lucky */
             margin-bottom: 5px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -86,9 +93,9 @@
             font-size: clamp(16px, 4vw, 22px);
             color: #fff;
             margin-bottom: 30px;
-            font-weight: 300;
         }
 
+        /* BOTÓN WA PRINCIPAL */
         .btn-whatsapp-hero {
             background-color: #25d366;
             color: white;
@@ -96,11 +103,9 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
-            letter-spacing: 1px;
-            transition: 0.3s;
         }
 
-        /* GALERÍA DE IMÁGENES */
+        /* SECCIÓN GALERÍA */
         .gallery {
             padding: 80px 5%;
             background-color: #000;
@@ -109,7 +114,6 @@
 
         .gallery h2 {
             font-weight: 300;
-            letter-spacing: 2px;
             margin-bottom: 40px;
             font-size: 24px;
             color: #ccc;
@@ -131,7 +135,7 @@
             border: 1px solid #222;
         }
 
-        /* SECCIÓN UBICACIÓN (INTEGRANDO EL MAPA) */
+        /* SECCIÓN UBICACIÓN CON EL MAPA CORREGIDO */
         .ubicacion-section {
             padding: 80px 5%;
             background-color: #0d0d0d;
@@ -149,18 +153,17 @@
         .address-text {
             color: #888;
             margin-bottom: 40px;
-            font-size: 16px;
         }
 
-        /* Contenedor del mapa idéntico al anterior */
+        /* Contenedor del mapa IDÉNTICO a tu captura */
         .map-container {
             overflow: hidden;
-            border-radius: 20px; /* Bordes redondeados 3xl */
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); /* Sombra 2xl */
-            aspect-ratio: 16 / 9; /* Mantiene la proporción */
+            border-radius: 30px; /* Redondeado 3xl */
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); /* Sombra 2xl */
             max-width: 1000px;
             margin: 0 auto;
             border: 2px solid #222;
+            height: 450px; /* Altura fija para el mapa */
         }
 
         /* FOOTER & SOCIAL */
@@ -181,19 +184,10 @@
             filter: invert(1); /* Iconos blancos */
         }
 
-        footer {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #444;
-        }
-
-        /* AJUSTES MÓVILES */
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .navbar { padding: 10px 5%; }
-            .logo-container img { height: 55px; } /* Ajuste de logo para móvil */
-            h1 { font-size: 36px; }
-            .map-container { aspect-ratio: 4 / 3; } /* Proporción más cuadrada en móvil */
+            .logo-container img { height: 80px; }
+            .map-container { height: 300px; }
         }
     </style>
 </head>
@@ -231,13 +225,10 @@
     </div>
 
     <div id="ubicacion" class="ubicacion-section">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2>¿Dónde estamos?</h2>
-            <p class="address-text">Av. Aviación 4572-1A, Jardín Real, Zapopan, Jal.</p>
-            
-            <div class="map-container">
-                <iframe src="http://googleusercontent.com/maps.google.com/6" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+        <h2>¿Dónde estamos?</h2>
+        <p class="address-text">Av. Aviación 4572-1A, Jardín Real, Zapopan, Jal.</p>
+        <div class="map-container">
+            <iframe src="http://googleusercontent.com/http://googleusercontent.com/maps.google.com/9" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 
@@ -250,10 +241,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
             </a>
         </div>
-
-        <footer>
-            <p>© 2026 Lucky Fox GDL | Hugo Morales</p>
-        </footer>
+        <p style="color: #444; font-size: 12px; margin-top: 20px;">© 2026 Lucky Fox GDL | Hugo Morales</p>
     </div>
 
 </body>
