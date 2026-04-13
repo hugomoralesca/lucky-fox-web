@@ -15,12 +15,12 @@
             scroll-behavior: smooth;
         }
 
-        /* NAVBAR - Altura reducida */
+        /* NAVBAR */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 8px 5%; /* Padding reducido */
+            padding: 8px 5%;
             background-color: rgba(0, 0, 0, 0.95);
             border-bottom: 1px solid #333;
             position: fixed;
@@ -30,7 +30,7 @@
         }
 
         .logo-container img {
-            height: 85px; /* Reducido proporcionalmente */
+            height: 85px;
             width: auto;
         }
 
@@ -40,15 +40,10 @@
             gap: 20px;
         }
 
-        /* Iconos sociales en Navbar */
         .nav-social img {
             width: 24px;
             filter: invert(1);
             transition: 0.3s;
-        }
-
-        .nav-social:hover img {
-            opacity: 0.7;
         }
 
         .btn-navbar-whatsapp {
@@ -70,7 +65,7 @@
             align-items: center;
             text-align: center;
             padding: 0 20px;
-            margin-top: 80px; /* Ajustado por la nueva altura del Navbar */
+            margin-top: 80px;
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('hero.jpg');
             background-size: cover;
             background-position: center;
@@ -105,13 +100,6 @@
             text-align: center;
         }
 
-        .gallery h2 {
-            font-weight: 300;
-            margin-bottom: 40px;
-            font-size: 24px;
-            color: #ccc;
-        }
-
         .gallery-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -128,7 +116,7 @@
             border: 1px solid #222;
         }
 
-        /* UBICACIÓN */
+        /* UBICACIÓN - CORRECCIÓN MAPA */
         .ubicacion-section {
             padding: 80px 5%;
             background-color: #0d0d0d;
@@ -144,6 +132,7 @@
             margin: 40px auto 0;
             border: 2px solid #222;
             height: 450px;
+            background-color: #1a1a1a; /* Fondo oscuro mientras carga */
         }
 
         /* FOOTER */
@@ -162,18 +151,17 @@
         /* MOBILE ADJUSTMENTS */
         @media (max-width: 768px) {
             .navbar { padding: 8px 5%; }
-            .logo-container img { height: 60px; } /* Más pequeño en móvil */
+            .logo-container img { height: 60px; }
             
             .hero {
                 height: 70vh;
-                background-attachment: scroll;
+                background-attachment: scroll; /* Importante para estabilidad en móvil */
                 background-position: center center;
                 margin-top: 70px;
             }
 
-            .map-container { height: 300px; }
+            .map-container { height: 350px; } /* Un poco más alto para que se vea mejor en móvil */
             .nav-social img { width: 20px; }
-            .btn-navbar-whatsapp { padding: 6px 15px; font-size: 11px; }
         }
     </style>
 </head>
@@ -215,8 +203,8 @@
         <p style="color: #888;">Av. Aviación 4572-1A, Jardín Real, 45136 Zapopan, Jal.</p>
         <div class="map-container">
             <iframe 
-                src="https://maps.google.com/?cid=2962691729871861104&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" 
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.18128362446!2d-103.4475518!3d20.7028711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428afbe726f8b5d%3A0x291d986e69fffd70!2sLucky%20Fox!5e0!3m2!1ses-419!2smx!4v1713000000000!5m2!1ses-419!2smx" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
     </div>
