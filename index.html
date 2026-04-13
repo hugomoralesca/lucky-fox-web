@@ -116,7 +116,7 @@
             border: 1px solid #222;
         }
 
-        /* UBICACIÓN - CORRECCIÓN MAPA */
+        /* UBICACIÓN - FIX FINAL PARA MÓVIL */
         .ubicacion-section {
             padding: 80px 5%;
             background-color: #0d0d0d;
@@ -130,9 +130,11 @@
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
             max-width: 1000px;
             margin: 40px auto 0;
-            border: 2px solid #222;
+            border: 2px solid #333;
             height: 450px;
-            background-color: #1a1a1a; /* Fondo oscuro mientras carga */
+            background-color: #1a1a1a;
+            position: relative; /* Asegura estabilidad */
+            -webkit-mask-image: -webkit-radial-gradient(white, black); /* Fix para bordes redondeados en Safari */
         }
 
         /* FOOTER */
@@ -155,12 +157,12 @@
             
             .hero {
                 height: 70vh;
-                background-attachment: scroll; /* Importante para estabilidad en móvil */
+                background-attachment: scroll; 
                 background-position: center center;
                 margin-top: 70px;
             }
 
-            .map-container { height: 350px; } /* Un poco más alto para que se vea mejor en móvil */
+            .map-container { height: 350px; } 
             .nav-social img { width: 20px; }
         }
     </style>
@@ -203,8 +205,8 @@
         <p style="color: #888;">Av. Aviación 4572-1A, Jardín Real, 45136 Zapopan, Jal.</p>
         <div class="map-container">
             <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.18128362446!2d-103.4475518!3d20.7028711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428afbe726f8b5d%3A0x291d986e69fffd70!2sLucky%20Fox!5e0!3m2!1ses-419!2smx!4v1713000000000!5m2!1ses-419!2smx" 
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.227282121379!2d-103.45330332398516!3d20.70094939922378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428afbe726f8b5d%3A0x291d986e69fffd70!2sLucky%20Fox!5e0!3m2!1ses-419!2smx!4v1712850000000!5m2!1ses-419!2smx" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
     </div>
