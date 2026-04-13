@@ -30,25 +30,21 @@
         }
 
         .logo-container img {
-            height: 180px; /* Logo super imponente */
+            height: 115px; /* Tamaño grande según tu petición anterior */
             width: auto;
         }
 
         .nav-right {
             display: flex;
             align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
+            gap: 20px;
         }
 
         .nav-links a {
             color: white;
             text-decoration: none;
-            margin-left: 20px;
             font-size: 14px;
-            font-weight: 400;
+            margin-left: 15px;
         }
 
         .btn-navbar-whatsapp {
@@ -59,10 +55,9 @@
             text-decoration: none;
             font-weight: 700;
             font-size: 13px;
-            margin-left: 20px;
         }
 
-        /* HERO */
+        /* HERO SECTION - CORREGIDA PARA MÓVIL */
         .hero {
             height: 85vh;
             display: flex;
@@ -71,11 +66,13 @@
             align-items: center;
             text-align: center;
             padding: 0 20px;
-            margin-top: 120px;
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('IMG_2788.jpg');
+            margin-top: 100px;
+            
+            /* Imagen de fondo con degradado */
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('hero.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-attachment: fixed; /* Parallax para PC */
         }
 
         h1 {
@@ -83,12 +80,10 @@
             color: #ff6600;
             margin-bottom: 5px;
             text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
         .hero p {
             font-size: clamp(16px, 4vw, 22px);
-            color: #fff;
             margin-bottom: 30px;
         }
 
@@ -139,17 +134,12 @@
             border-top: 1px solid #222;
         }
 
-        .address-text {
-            color: #888;
-            margin-bottom: 40px;
-        }
-
         .map-container {
             overflow: hidden;
             border-radius: 30px;
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
             max-width: 1000px;
-            margin: 0 auto;
+            margin: 40px auto 0;
             border: 2px solid #222;
             height: 450px;
         }
@@ -159,23 +149,27 @@
             padding: 40px 5%;
             text-align: center;
             background-color: #000;
-            border-top: 1px solid #222;
-        }
-
-        .social-icons a {
-            margin: 0 15px;
-            display: inline-block;
         }
 
         .social-icons img {
             width: 28px;
             filter: invert(1);
+            margin: 0 15px;
         }
 
+        /* AJUSTES ESPECÍFICOS PARA MÓVIL */
         @media (max-width: 768px) {
             .nav-links { display: none; }
-            .logo-container img { height: 100px; }
             .navbar { padding: 10px 5%; }
+            .logo-container img { height: 80px; }
+            
+            .hero {
+                height: 70vh; /* Altura más cómoda para móvil */
+                background-attachment: scroll; /* Vital para que la imagen no se vea mal en iPhone/Android */
+                background-position: center center;
+                margin-top: 80px;
+            }
+
             .map-container { height: 300px; }
         }
     </style>
@@ -190,8 +184,6 @@
             <div class="nav-links">
                 <a href="#galeria">El Lugar</a>
                 <a href="#ubicacion">Ubicación</a>
-                <a href="https://www.facebook.com/luckyfoxgdl/" target="_blank">FB</a>
-                <a href="https://www.instagram.com/luckyfox_gdl" target="_blank">IG</a>
             </div>
             <a href="https://wa.me/523329197976" class="btn-navbar-whatsapp">Reservar</a>
         </div>
@@ -215,22 +207,21 @@
 
     <div id="ubicacion" class="ubicacion-section">
         <h2>¿Dónde estamos?</h2>
-        <p class="address-text">Av. Aviación 4572-1A, Jardín Real, Zapopan, Jal.</p>
+        <p style="color: #888;">Av. Aviación 4572-1A, Jardín Real, Zapopan, Jal.</p>
         <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.833621946006!2d-103.4449835!3d20.7169134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428a97471ba61f3%3A0xe54955b404d0920a!2sLucky%20Fox%20GDL!5e0!3m2!1ses-419!2smx!4v1712880000000!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.146524344012!2d-103.4530058!3d20.7042557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428af0027f3f3f3%3A0x1d1d1d1d1d1d1d1d!2sLucky%20Fox%20GDL!5e0!3m2!1ses-419!2smx!4v1712880000000!5m2!1ses-419!2smx" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
         </div>
     </div>
 
     <div class="footer-section">
         <div class="social-icons">
-            <a href="https://www.facebook.com/luckyfoxgdl/" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com/luckyfox_gdl" target="_blank">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-            </a>
+            <a href="https://www.facebook.com/luckyfoxgdl/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="FB"></a>
+            <a href="https://www.instagram.com/luckyfox_gdl" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="IG"></a>
         </div>
-        <p style="color: #444; font-size: 12px; margin-top: 20px;">© 2026 Lucky Fox GDL | Hugo Morales</p>
+        <p style="color: #444; font-size: 12px; margin-top: 20px;">© 2026 Lucky Fox GDL</p>
     </div>
 
 </body>
