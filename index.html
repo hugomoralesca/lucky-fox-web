@@ -15,7 +15,7 @@
             scroll-behavior: smooth;
         }
 
-        /* NAVBAR - Altura reducida al 25% */
+        /* NAVBAR */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -40,15 +40,9 @@
             gap: 20px;
         }
 
-        /* Iconos sociales en Navbar */
         .nav-social img {
             width: 24px;
             filter: invert(1);
-            transition: 0.3s;
-        }
-
-        .nav-social:hover img {
-            opacity: 0.7;
         }
 
         .btn-navbar-whatsapp {
@@ -105,13 +99,6 @@
             text-align: center;
         }
 
-        .gallery h2 {
-            font-weight: 300;
-            margin-bottom: 40px;
-            font-size: 24px;
-            color: #ccc;
-        }
-
         .gallery-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -128,7 +115,7 @@
             border: 1px solid #222;
         }
 
-        /* UBICACIÓN */
+        /* UBICACIÓN - FIX DEFINITIVO */
         .ubicacion-section {
             padding: 80px 5%;
             background-color: #0d0d0d;
@@ -142,7 +129,7 @@
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
             max-width: 1000px;
             margin: 40px auto 0;
-            border: 2px solid #222;
+            border: 2px solid #333;
             height: 450px;
             background-color: #1a1a1a;
         }
@@ -164,17 +151,12 @@
         @media (max-width: 768px) {
             .navbar { padding: 8px 5%; }
             .logo-container img { height: 60px; }
-            
             .hero {
                 height: 70vh;
-                background-attachment: scroll;
-                background-position: center center;
+                background-attachment: scroll; 
                 margin-top: 70px;
             }
-
-            .map-container { height: 300px; }
-            .nav-social img { width: 20px; }
-            .btn-navbar-whatsapp { padding: 6px 15px; font-size: 11px; }
+            .map-container { height: 350px; } 
         }
     </style>
 </head>
